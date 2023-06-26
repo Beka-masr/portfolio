@@ -282,48 +282,51 @@
      box-shadow: 1px 1px  5px;
     }
  /* End About */
- /* Start Skills */
- .my-skills{
-   padding-top: var(--main-padding);
-   padding-bottom: var(--main-padding);
- }
- .my-skills .container{
-   display: flex;
-   justify-content: space-evenly;
-   flex-wrap: wrap;
-   align-items: center;
-   gap: 10px;
- }
- .my-skills .container .one .info{
-    margin-top: 35px;
-    font-weight: 500;
-    position: relative;
- }
- .my-skills .container .info .html{
-    width: 300px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-top: 4px;
- }
- .my-skills .container .info span{
-    position: absolute;
-     font-size: 16px;
-     top: 37px;
-     right: 20px;
-     color: var(--global-color);
- }
- @media (max-width: 350px){
-    .my-skills .container .info .html{
-       width: 250px;
+  /* Start Skills */
+    .my-skills{
+      padding-top: var(--main-padding);
+      padding-bottom: var(--main-padding);
     }
- }
- .my-skills .container .info .html div{
-    height: 10px;
-    background-color: red;
-    border-radius: 10px;
- }
+    .my-skills .container{
+      display: flex;
+      align-items: center;
+    }
+    @media (max-width: 991px){
+      .my-skills .container img{
+         display: none;
+      }
+    }
+    .my-skills .container .skills{
+      flex: 1;
+    }
+    .my-skills .skill h3{
+      margin-bottom: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .my-skills .skill .prog-holder{
+      position: relative;
+      height: 30px;
+      background-color: #ddd;
+    }
+    .my-skills .skill .prog-holder span{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 30px;
+      background-color: var(--global-color);
+    }
+    .my-skills .skill .prog-holder span::before{
+      content: attr(data-Progress);
+      position: absolute;
+      right: -19px;
+      top: -40px;
+      border: 1px solid #ccc;
+      padding: 3px 5px;
+      border-radius: 4px;
+      color: var(--global-color);
+      font-weight: bold;
+    }
  /* End Skills */
  /* Start Works */
  .my-works{
